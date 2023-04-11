@@ -16,21 +16,35 @@
       crossorigin
       >
     </script>
-    <!-- import babel -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
   </head>
   <body>
     <div id="root"></div>
     <!-- add the required type attribute on the script below -->
-    <script>
+    <script type = "text/babel">
       const rootElement = document.querySelector("#root");
       const root = ReactDOM.createRoot(rootElement);
-
+    //   const element = React.createElement("h1", {
+    //   className: 'container'
+    // }, 'TEXT');
+    function Heading() {
+        return <h1 className = 'container'> TEXT </h1> 
+    }
+    function Button() {
+      // code here
+      return <button className = 'button'> big button </button>
+      // React.createElement('button', {
+      //   className: 'button'
+      // }, 'big button');
+    }
       function Title() {
         // convert this to jsx
-        return React.createElement("h1", null, "JSX Rules!");
+        //return React.createElement("h1", null, "JSX Rules!");
+        return <h1>JSX Rules!</h1>
       }
 
-      root.render(Title());
+      root.render([<Title />, <Heading />, <Button />]);
     </script>
   </body>
 </html>

@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/styles.css" />
-
-    <script
-      src="https://unpkg.com/react@18/umd/react.development.js"
-      crossorigin
-    ></script>
-    <script
-      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
-      crossorigin
-    ></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="text/babel">
-      const rootElement = document.querySelector("#root");
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel"> const rootElement = document.querySelector("#root");
       const root = ReactDOM.createRoot(rootElement);
 
+
+
       function ListItem(props) {
-        return <li>{props.text}</li>;
+        return <li>{props.text}</li>
       }
 
       root.render([
@@ -32,5 +26,5 @@
         <ListItem text="Flour" />,
       ]);
     </script>
-  </body>
+</body>
 </html>

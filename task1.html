@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/styles.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script>
-      const rootElement = document.querySelector("#root");
-      const element = document.createElement("div");
-      element.innerText = "Hello World";
-      element.className = "container";
-      rootElement.appendChild(element);
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    // select root element
+    const rootElement = document.querySelector("#root");
+    // create a h1 with className container and text
+    const element = React.createElement("h1", {
+      className: 'container'
+    }, 'TEXT');
+    // use createRoot to render the h1 to the root element
+    const root = ReactDOM.createRoot(rootElement)
+    root.render(element)
+  </script>
+</body>
 </html>
